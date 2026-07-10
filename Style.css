@@ -1,0 +1,54 @@
+/* 1. Global Reset & Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff5f7; /* Very soft pink/off-white background */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 2. Main Container or List Layout */
+/* This transforms your vertical stack into a beautiful, responsive grid */
+ul, ol, .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0;
+    list-style: none; /* Removes default bullet points if you used an <ul> */
+}
+
+/* 3. Card Styling for Each Item */
+li, .card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #fce4ec; /* Subtle pink border */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Subtle lift effect when hovering over an item */
+li:hover, .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.15); /* Soft pink shadow */
+}
+
+/* 4. Image Resizing and Uniformity */
+li img, .card img {
+    width: 100%;
+    height: 200px; /* Forces all images to be the same height */
+    object-fit: cover; /* Crops nicely without distorting your tractors */
+    border-bottom: 3px solid #e91e63; /* Bold pink accent line under the image */
+}
+
+/* 5. Typography & Text Labels */
+li h2, li p, .card-text {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #4a154b; /* Deep plum/pinkish-purple text color for readability */
+}
